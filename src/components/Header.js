@@ -11,6 +11,13 @@ class Header extends Component{
           <Logo src={logo} alt="logo" />
           <NavLink to="/" className="signIn-btn">Sign In</NavLink>
         </div>
+
+        {/* Header Content */}
+        <div className="header-content">
+          <Title>See What's next...</Title>
+          <h2>WATCH ANYWHERE. CANCEL ANYTIME.</h2>
+          <button>try it now</button>
+        </div>
       </HeaderComponent>
     );
   }
@@ -47,4 +54,19 @@ const HeaderComponent = styled.div`
       background: var(--main-red-hover);
     }
   }
+
+  // Header Top
+  .header-top {
+    position: relative;
+    height: 10rem;
+    z-index: 1;
+  }
+`;
+
+// Main Title
+const Title = styled.h1`
+  margin: 0 0 1.2rem;
+  font-size:5rem;
+  font-weight: 700;
+  line-height: 1.1em;
 `;
