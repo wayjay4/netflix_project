@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import logo from '../files/svg/logo.svg';
 import {NavLink, Link} from 'react-router-dom';
 import styled from 'styled-components';
+import {Icon} from 'react-icons-kit';
+import {ic_keyboard_arrow_right} from 'react-icons-kit/md/ic_keyboard_arrow_right';
+
+// https://react-icons-kit.now.sh/iconset/md
 
 class Header extends Component{
   render(){
@@ -16,7 +20,10 @@ class Header extends Component{
         <div className="header-content">
           <Title>See What's next...</Title>
           <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME.</SubTitle>
-          <Link className="main-offer-btn">try it now</Link>
+          <Link className="main-offer-btn">
+            try it now
+            <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
+          </Link>
         </div>
       </HeaderComponent>
     );
@@ -92,6 +99,11 @@ const HeaderComponent = styled.div`
     &:hover {
       background: var(--main-red-hover);
     }
+  }
+
+  .Icon svg {
+    vertical-align: bottom:
+    margin-left: 1.5rem;
   }
 `;
 
