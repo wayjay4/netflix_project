@@ -15,7 +15,7 @@ class Header extends Component{
         {/* Header Content */}
         <div className="header-content">
           <Title>See What's next...</Title>
-          <h2>WATCH ANYWHERE. CANCEL ANYTIME.</h2>
+          <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME.</SubTitle>
           <button>try it now</button>
         </div>
       </HeaderComponent>
@@ -61,6 +61,19 @@ const HeaderComponent = styled.div`
     height: 10rem;
     z-index: 1;
   }
+
+  // Header Content
+  .header-content {
+    width:65%;
+    position: relative;
+    margin: 4.5rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 1;
+  }
 `;
 
 // Main Title
@@ -69,4 +82,13 @@ const Title = styled.h1`
   font-size:5rem;
   font-weight: 700;
   line-height: 1.1em;
+`;
+
+// Subtitle
+const SubTitle = styled.h2`
+  font-weight:400;
+  font-size:1.875rem;
+  line-height:1.25rem;
+  margin: 0 0 1.875rem;
+  text-transform: uppercase;
 `;
